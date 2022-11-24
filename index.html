@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- These two meta tags must always be added first in the head to ensure that the site displays correctly -->
+    
+        <!-- character set for the site -->
+        <meta charset="UTF-8">
+
+        <!-- this controls whether or not the site can be responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>All Foods Mart</title>
+
+        <!--Tells who wrote the HTML -->
+        <meta name="author" content="Jessica Barnett">
+        
+        <!-- Accurate description about the content 140-160 characters to display on search engines -->
+        <meta name="description" content="All Foods Mart is you favorite local grocer! Weekly coupons on top of always-low prices save you more!">
+
+        <!-- Summarize the main topic, avoid "keyword stuffing" -->
+        <meta name="keywords" content="grocery, shopping, food, coupons, savings, local, store">
+        
+        <!--Help web crawlers index and display your page -->
+        <meta name="robots" content="follow,index">
+
+        <!-- OPEN GRAPH/SOCIAL MEDIA META TAGS -->
+        <!-- For Twitter -->
+        <!-- Reference Here: https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@allfoodsmart">
+        <meta name="twitter:creator" content="@theCodingCreatv">
+        <meta name="twitter:title" content="All Foods Mart">
+        <meta name="twitter:description" content="All Foods Mart is you favorite local grocer! Weekly coupons on top of always-low prices save you more!">
+        <meta name="twitter:image" content="https://www.allfoodsmart.com/images/hero-med.webp">
+
+        <!-- Open Graph -->	
+        <!-- Reference Here: https://ahrefs.com/blog/open-graph-meta-tags/ -->
+        <meta property="og:title" content="All Foods Martr">
+        <meta property="og:url" content="https://www.allfoodsmart.com">
+        <meta property="og:image" content="https://www.allfoodsmart.com/images/hero-med.webp">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="All Foods Mart is you favorite local grocer! Weekly coupons on top of always-low prices save you more!">
+        <meta property="og:locale" content="en_US">
+
+        <!-- Firefox, Chrome, Safari, IE 11+, Edge, and Opera. 196x196 pixels in size. --> 
+        <link rel="shortcut icon" href="images/favicon.ico">
+
+        <!-- External Style files - fonts, etc. -->
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@500;800&display=swap" rel="stylesheet">
+        <!-- Anicons - for hamburger icon (animated on action) -->
+        <link href="https://res.cloudinary.com/dr6lvwubh/raw/upload/v1581441981/Anicons/anicons-regular.css" rel="stylesheet">
+
+        <!-- Link to Normalize File -->
+        <link rel="stylesheet" href="normalize.css">
+
+        <!-- Link to CSS -->
+        <link rel="stylesheet" href="obfus-styles.css">
+    </head>
+    <body>
+        <a id="skip" href="#main">Skip to main content</a>
+        <header>
+            <h1>All Foods Mart</h1>
+            <button id="cart">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="6" cy="19" r="2" />
+                    <circle cx="17" cy="19" r="2" />
+                    <path d="M17 17h-11v-14h-2" />
+                    <path d="M6 5l14 1l-1 7h-13" />
+                </svg>
+            </button>
+            <nav>
+                <div id="menuToggle">
+                    <input type="checkbox" name="toggle" id="toggle">
+                    <label for="toggle">
+                        <span id="menuIcon">A</span>
+                    </label>
+                    <h2 class="sr-only">Main Navigation</h2>
+                    <ul id="menu">
+                        <li><a href="#main">Home</a></li>
+                        <li><a href="#ad">Weekly Ad</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#coupons">Coupons</a></li>
+                        <li><a href="#club">Coupon Club</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main id="main">
+            <section id="ad">
+                <div>
+                    <h2>Weekly Advertisement</h2>
+                    <p>
+                        This week's specials are just in time for back to school. Everything you need to get the kids ready for their first day - from school supplies to healthy lunches.
+                    </p>
+                    <a href="#">View Weekly Ad</a>
+                </div>
+            </section>
+            <section id="shop">
+                <h2>Shop Categories</h2>
+                <div class="width_limit">
+                    <a href="#">   
+                        <section>
+                            <div>
+                                <img src="images/meat.webp" alt="pork, rosemary, and peppercorns on a wooden board" width="154.66" height="154.39">
+                            </div>
+                            <h3>Meat</h3>
+                        </section>
+                    </a> 
+                    <a href="#"> 
+                        <section>
+                            <div>
+                                <img src="images/seafood.webp" alt="baked salmon shown with mashed potatoes and mixed vegetables" width="154.66" height="155.17">
+                            </div>
+                            <h3>Seafood</h3>
+                        </section>
+                    </a> 
+                    <a href="#"> 
+                        <section>
+                            <div>
+                                <img src="images/dairy.webp" alt="a bowl of brown eggs next to a short glass of milk and milk container" width="155" height="155">
+                            </div>
+                            <h3>Dairy</h3>
+                        </section>
+                    </a> 
+                    <a href="#"> 
+                        <section>
+                            <div>
+                                <img src="images/produce.webp" alt="apples, sliced and whole, shown with honey and a knife" width="155" height="155">
+                            </div>
+                            <h3>Produce</h3>
+                        </section>
+                    </a> 
+                    <a href="#"> 
+                        <section>
+                            <div>
+                                <img src="images/bakery.webp" alt="a pan of chocolate chip muffins held over a wooden surface" width="155" height="155">
+                            </div>
+                            <h3>Bakery</h3>
+                        </section>
+                    </a> 
+                    <a href="#"> 
+                        <section>
+                            <div>
+                                <img src="images/beverages.webp" alt="tea with lemon next to additional tea bags and lemon slices" width="155" height="155">
+                            </div>
+                            <h3>Beverages</h3>
+                        </section>
+                    </a> 
+                    <a href="#" class="view_btn">View All</a>
+                </div>
+            </section>
+            <section id="coupons">
+                <h2>Coupons</h2>
+                <p class="col-span">
+                    All store coupons are accepted until their expiration date. Don't miss <span class="caps">Double Coupons</span> every Tuesday. In-store only.
+                </p>
+                <div>
+                    <section>
+                        <img src="images/dressing.webp" alt="bottle of American Gourmet Italian salad dressing" width="440" height="440">
+                        <h3><span>Salad Dressing</span> <span>Exp. 12/3/2021</span></h3>
+                        <p class="coupon_tag">
+                            Buy 2, get 2 with coupon
+                        </p>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-scissors" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <circle cx="6" cy="7" r="3" />
+                                <circle cx="6" cy="17" r="3" />
+                                <line x1="8.6" y1="8.6" x2="19" y2="19" />
+                                <line x1="8.6" y1="15.4" x2="19" y2="5" />
+                            </svg>
+                            <span>Clip</span>
+                        </button>
+                    </section>
+                    <section>
+                        <img src="images/honey.webp" alt="bottle of American Gourmet honey" width="440" height="440">
+                        <h3><span>Honey</span> <span>Exp. 1/3/2022</span></h3>
+                        <p class="coupon_tag">
+                            Save $0.35
+                        </p>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-scissors" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <circle cx="6" cy="7" r="3" />
+                                <circle cx="6" cy="17" r="3" />
+                                <line x1="8.6" y1="8.6" x2="19" y2="19" />
+                                <line x1="8.6" y1="15.4" x2="19" y2="5" />
+                            </svg>
+                            <span>Clip</span>
+                        </button>
+                    </section>
+                    <section id="marinara">
+                        <img src="images/marinara.webp" alt="Bottle of Bertolli vineyard marinara with burgundy wine" width="440" height="440">
+                        <h3><span>Marinara</span> <span>Exp. 12/3/2021</span></h3>
+                        <p class="coupon_tag">
+                            Buy 1, get 1. Mix and match.
+                        </p>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-scissors" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <circle cx="6" cy="7" r="3" />
+                                <circle cx="6" cy="17" r="3" />
+                                <line x1="8.6" y1="8.6" x2="19" y2="19" />
+                                <line x1="8.6" y1="15.4" x2="19" y2="5" />
+                            </svg>
+                            <span>Clip</span>
+                        </button>
+                    </section>
+                    <section>
+                        <img src="images/mustard.webp" alt="bottle of American Gourmet yellow mustard - gluten free" width="440" height="440">
+                        <h3><span>Mustard</span> <span>Exp. 12/31/2021</span></h3>
+                        <p class="coupon_tag">
+                            Save $1.00 on 48oz. size. Limit 1 per customer
+                        </p>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-scissors" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <circle cx="6" cy="7" r="3" />
+                                <circle cx="6" cy="17" r="3" />
+                                <line x1="8.6" y1="8.6" x2="19" y2="19" />
+                                <line x1="8.6" y1="15.4" x2="19" y2="5" />
+                            </svg>
+                            <span>Clip</span>
+                        </button>
+                    </section>
+                    <a href="#" class="view_btn">View All</a>
+                </div>
+            </section>
+            <section id="club">
+                <h2>Coupon Club</h2>
+                <p>Inputs marked with a <span class="required">*</span> are required</p>
+                <form>
+                    <label for="fName">First Name<span class="required">*</span></label>
+                    <input type="text" name="fName" id="fName" autocomplete="given-name" placeholder="First Name" required>
+                    <label for="lName">Last Name<span class="required">*</span></label>
+                    <input type="text" name="lName" id="lName" autocomplete="family-name" placeholder="Last Name" required>
+                    <label for="myEmail">Email Address<span class="required">*</span></label>
+                    <input type="email" name="myEmail" id="myEmail" autocomplete="email" placeholder="Email Address" required>
+                    <input type="submit" name="mySubmit" id="mySubmit" value="Sign Up">
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div>
+                <section id="address_and_phone">
+                    <h2>All Food Mart</h2>
+                    <address>
+                        123 Mockup Street<br>
+                        San Francisco, CA 10000
+                        <span id="desktop">(555) 555-5555</span>
+                        <a href="tel:555-555-5555" id="mobile">(555) 555-5555</a>
+                    </address>
+                </section>
+                <section id="social_media">
+                    <h2 class="sr-only">Find us on Social Media</h2>
+                    <a href="#" aria-label="Find us on Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5"  fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Email Customer Service">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <rect x="3" y="5" width="18" height="14" rx="2" />
+                            <polyline points="3 7 12 13 21 7" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Follow Us on Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5"  fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Follow Us on Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5"  fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <rect x="4" y="4" width="16" height="16" rx="4" />
+                            <circle cx="12" cy="12" r="3" />
+                            <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                        </svg>
+                    </a>
+                </section>
+                <p>Copyright &copy; 2021 - Barnett All Rights Reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>
