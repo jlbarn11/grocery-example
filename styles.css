@@ -1,0 +1,1000 @@
+/* ---------- Custom Styles by Prof. Barnett ---------- */
+
+/* ---------- Fonts - to prevent render blocking ---------- */
+/* public-sans-500 - latin */
+@font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('fonts/public-sans-v14-latin-500.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('fonts/public-sans-v14-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/public-sans-v14-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/public-sans-v14-latin-500.woff') format('woff'), /* Modern Browsers */
+         url('fonts/public-sans-v14-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/public-sans-v14-latin-500.svg#PublicSans') format('svg'); /* Legacy iOS */
+}
+  /* public-sans-800 - latin */
+@font-face {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('../fonts/public-sans-v14-latin-800.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('fonts/public-sans-v14-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/public-sans-v14-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/public-sans-v14-latin-800.woff') format('woff'), /* Modern Browsers */
+         url('fonts/public-sans-v14-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/public-sans-v14-latin-800.svg#PublicSans') format('svg'); /* Legacy iOS */
+}
+
+/* ---------- Variables and other settings for document ---------- */
+:root{
+    --blueberry: #1f4373;
+    --veg: #96a61f;
+    --grain: #bf9004;
+    --toast: #73532d;
+    --cranberry: #a64037;
+    --light-gray: #eaeaea;
+    --med-gray: #555;
+    --dark-gray: #222;
+    --white: #fff;
+    --black: #000;
+    --transparent-blueberry: rgba(31, 67, 115, 0.2);
+    --transparent-veg: rgba(150, 166, 31, 0.2);
+    --transparent-grain: rgba(191, 144, 4, 0.2);
+    --transparent-toast: rgba(115, 83, 45, 0.2);
+    --transparent-cranberry: rgba(166, 64, 55, 0.2);
+    --transparent-white: rgba(255, 255, 255, .5);
+    --small-white-shadow: 3px 3px 6px rgba(255, 255, 255, .5);
+    --small-shadow: 3px 3px 6px var(--med-gray);
+    --spread-shadow: 6px 6px 10px var(--med-gray);
+    --spread-white-shadow: 6px 6px 10px rgba(255, 255, 255, .5);
+    --small-filter-shadow: drop-shadow(0 0 0.25rem var(--med-gray));
+    --big-filter-shadow: drop-shadow(0 0 0.5rem var(--med-gray));
+    --fonts: 'Public Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* ---------- Other Styles for document ---------- */
+body{
+    line-height: 1.5;
+    box-sizing: border-box;
+    color: var(--dark-gray);
+    background-color: var(--transparent-toast);
+    font-family: var(--fonts);
+}
+
+/* ---------- Skip Link Styles ---------- */
+/* ----- From: https://webaim.org/techniques/css/invisiblecontent/ ----- */
+#skip{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+ 
+#skip:focus{
+    position: static;
+    width: auto;
+    height: auto;
+    color: var(--dark-gray);
+    font-size: 1.25rem;
+    font-weight: 800;
+    background-color: var(--beige);
+}
+
+/* ---------- Hidden/Accessible Content Styles ---------- */
+/* ----- From: https://webaim.org/techniques/css/invisiblecontent/ ----- */
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* ---------- Header Styles ---------- */
+header{
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    align-items: center;
+}
+
+/* ---------- Heading Styles ---------- */
+h1, h2, h3, h4{
+    font-weight: 800;
+}
+
+h1{
+    font-size: 1.4rem;
+}
+
+h2{
+    font-size: 2rem;
+    margin: 0;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h4{
+    font-size: 1.35rem;
+}
+
+/* ---------- Link Styles ---------- */
+a{
+    display: block;
+    padding: 1rem;
+}
+
+a:focus{
+    outline-color: var(--cranberry);
+    border-color: var(--cranberry); 
+}
+
+/* ---------- Navigation Styles ---------- */
+#menuToggle {
+	display: block;
+	position: relative;
+	z-index: 1; 
+    top: -1rem;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	 -ms-user-select: none;
+		 user-select: none;
+}
+
+/* The hamburger button hidden inside an input element */
+#menuToggle input {
+	display: block;
+	width: 3.25rem;
+	height: 3.25rem;
+	position: absolute;
+	top: 10px;
+	left: 14px;  
+	padding: 0;
+	cursor: pointer;  
+	opacity: 0; /* hide this */
+	z-index: 2; /* and place it over the hamburger */  
+	-webkit-touch-callout: none;
+}
+
+#menuToggle input:focus{
+    border-radius: 50%;
+    outline: 4px solid var(--cranberry);
+    background: transparent;
+    opacity: 1;
+    appearance: none;
+    border: none;
+    box-shadow: none;
+}
+
+#menuToggle label {
+	position: relative;
+	display: block;
+	width: 3rem;
+	height: 3rem;
+    margin-right: 1rem;
+}
+
+#menuToggle label span {
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	position: relative;
+    left: 1rem;
+	z-index: 1;  
+	-webkit-transform-origin: 4px 0px;  
+		-ms-transform-origin: 4px 0px;  
+			transform-origin: 4px 0px;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+#menuIcon{
+	font-family: "Anicons Regular", sans-serif;
+	font-variation-settings: "TIME" 1;
+	font-size: 3rem;
+	color: var(--dark-green);
+	transition: font-variation-settings 0.4s ease;
+}
+
+#menuToggle input:checked + label span {
+	font-variation-settings: "TIME" 100;
+    color: var(--white);
+}
+
+/*
+ * Use absolute positioning to place the menu off-screen
+ */
+#menu{
+	position: absolute;
+	width: 100vw;
+	margin: -6rem 0 0 0;
+	padding: 7rem 0 3rem 0;
+	background-color: var(--blueberry);
+	right: 100vw;
+	-webkit-transition: right 0.3s ease;
+	-o-transition: right 0.3s ease;
+	transition: right 0.3s ease; 
+}
+
+#menuToggle ul{
+    visibility: hidden;
+}
+
+#menu li{
+    list-style-type: none;
+}
+
+/*
+* Slide the menu in from left when the input is checked
+*/
+#menuToggle input:checked ~ ul {
+	right: -0.5rem;
+    visibility: visible;
+}
+
+#menuToggle a{
+    font-size: 1.35rem;
+    text-align: center;
+    text-decoration: none;
+	color: var(--white);
+    font-weight: 800;
+    margin: 0.5rem auto;
+    padding: 1rem 0;
+    -webkit-transition: background-color 0.3s ease;
+	-o-transition: background-color 0.3s ease;
+	transition: background-color 0.3s ease;
+}
+
+/* ---------- Shopping Cart Button Styles ---------- */
+#cart{
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ---------- Image Styles ---------- */
+img, svg{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#cart svg{
+    stroke: var(--dark-gray);
+    width: 44px;
+    height: 44px;
+    padding: 1rem;
+}
+
+#cart:focus{
+    background-color: var(--blueberry);
+    border-radius: 50%;
+}
+
+#cart:focus > svg{
+    stroke: var(--white);
+}
+
+/* ---------- Text Styles ---------- */
+p{
+    padding: 1rem 0;
+    max-width: 60ch;
+    margin: 0 auto;
+}
+
+.border-bottom{
+    border-bottom: 5px dotted var(--apple);
+}
+
+/* ---------- View All and View Ad Link/Button Styles ---------- */
+#ad a, .view_btn{
+    text-align: center;
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.5rem;
+    background-color: var(--veg);
+    color: var(--dark-gray);
+    box-shadow: var(--small-shadow);
+}
+
+#ad a:focus{
+    outline: 4px solid var(--cranberry);
+}
+
+#ad a{
+    font-size: 1.2rem;
+}
+
+.view_btn{
+    grid-column: 1/-1;
+    padding: 1rem;
+    margin-top: 1.25rem;
+}
+
+/* ---------- Main Section Styles ---------- */
+#shop, #coupons, #club{
+    padding: 1rem;
+}
+
+/* ---------- Ad Section Styles ---------- */
+#ad{
+    padding: 8rem 1rem 5rem 1rem;
+    background: url("images/hero-sm.webp") 
+    center center / cover
+    no-repeat
+    fixed
+    padding-box;
+}
+
+#ad h2{
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+#ad p{
+    padding: 0.5rem 0;
+}
+
+/* ---------- Shop Section Styles ---------- */
+#shop .width_limit{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.width_limit div{
+    filter: var(--big-filter-shadow);
+}
+
+#shop img{
+    clip-path: circle(50% at 50% 50%);
+    width: 80%;
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+#shop img::before{
+    filter: var(--big-filter-shadow);
+}
+
+#shop h2{
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+#shop a{
+    padding: 0;
+    color: var(--dark-gray);
+    text-decoration: none;
+}
+
+#shop a:focus{
+    outline: 4px solid var(--cranberry);
+    border-radius: 50%;
+}
+
+#shop a:last-of-type{
+    padding: 1rem;
+}
+
+#shop a:last-of-type:focus{
+    border-radius: 0;
+    outline: 4px solid var(--cranberry);
+}
+
+#shop h3{
+    text-align: center;
+    margin: 0.5rem 0 1rem 0;
+}
+
+/* ---------- Coupon Section Styles ---------- */
+#coupons{
+    padding: 2rem 1rem;
+    background-color: var(--toast);
+    color: var(--white);
+}
+
+#coupons h2{
+    text-align: center;
+}
+
+#coupons img{
+    background-color: var(--white);
+    width: calc(100% - 10px);
+    max-width: 440px;
+    border: 5px dashed var(--dark-gray);
+    grid-column: 1/-1;
+}
+
+#coupons section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+#coupons h3{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    width: 100%;
+    font-weight: normal;
+}
+
+h3 span:last-of-type{
+    text-align: right;
+}
+
+.coupon_tag{
+    position: absolute;
+    background-color: var(--cranberry);
+    grid-column: 1/-1;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    margin-top: 1rem;
+    box-shadow: var(--small-shadow);
+    max-width: 75%;
+}
+
+#coupons p.col-span{
+    position: static;
+    background-color: transparent;
+    padding: 1rem 0;
+    margin: 0 auto;
+    box-shadow: none;
+}
+
+#coupons button{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1rem;
+    max-width: 175px;
+    border: none;
+    background-color: var(--blueberry);
+    font-size: 1.25rem;
+    color: var(--white);
+    box-shadow: none;
+}
+
+#coupons button:focus{
+    outline: 4px solid var(--veg);
+}
+
+#coupons .view_btn:focus{
+    outline: 4px solid var(--blueberry);
+}
+
+#coupons svg{
+    display: inline-block;
+    stroke: var(--white);
+    width: 2rem;
+    height: 2rem;
+}
+
+#coupons .view_btn{
+    box-shadow: none;
+}
+
+/* ---------- Club Section Styles ---------- */
+#club h2{
+    text-align: center;
+}
+
+#club p{
+    padding: 0;
+    text-align: center;
+}
+
+.required{
+    color: var(--cranberry);
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+input, label{
+    display: block;
+    width: 100%;
+}
+
+label{
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin: 1rem 0 0.25rem 0;
+}
+
+input{
+    width: calc(97% - 1.2rem);
+    padding: 0.9rem 0.65rem;
+    background-color: var(--transparent-grain);
+    border-color: transparent;
+    box-shadow: var(--small-shadow);
+}
+
+input:focus, input:focus-visible{
+    outline: 4px solid var(--cranberry);
+    box-shadow: var(--small-shadow);
+}
+
+#mySubmit{
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--white);
+    background-color: var(--blueberry);
+    margin: 2rem auto 1rem auto;
+    border: none;
+    width: 100%;
+    box-shadow: var(--spread-shadow);
+}
+
+#mySubmit:focus, #mySubmit:focus-visible{
+    background-color: var(--veg);
+    color: var(--dark-gray);
+    box-shadow: var(--spread-shadow);   
+}
+
+/* ---------- Footer Styles ---------- */
+footer{
+    background-color: var(--transparent-toast);
+    color: var(--dark-gray);
+    padding: 2rem 1rem;
+}
+
+address{
+    font-style: normal;
+}
+
+#mobile{
+    display: block;
+    font-family: var(--fonts);
+    color: var(--blueberry);
+    padding: 0 0 1.5rem 0;
+    text-decoration: none;
+}
+
+#mobile:focus-visible{
+    outline: none;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+#desktop{
+    display: none;
+}
+
+#social_media{
+    max-width: 320px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+#social_media a{
+    background-color: var(--veg);
+    stroke: var(--dark-gray);
+    border-radius: 50%;
+    filter: var(--big-filter-shadow);
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+#social_media a:focus{
+    outline: 4px solid var(--cranberry);
+}
+
+footer h2{
+    margin-bottom: 0;
+    font-size: 1.7rem;
+}
+
+footer p{
+    padding: 1.5rem 0 0 0;
+    text-align: center;
+}
+
+#address_and_phone{
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+#social_media div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.25rem;
+
+}
+
+footer div > a{
+    padding: 0.5rem;
+}
+
+footer ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#social_media svg{
+    width: 32px;
+    height: 32px;
+}
+
+/* ---------- Hover Styles (only applied when valid) ---------- */
+@media (hover){
+    #menuToggle a:hover{
+        background-color: var(--cranberry);
+        color: var(--white);
+        box-shadow: var(--small-shadow);
+    }
+
+    #cart svg:hover{
+        background-color: var(--blueberry);
+        stroke: var(--white);
+        border-radius: 50%;
+    }
+
+    #ad a:hover, .view_btn:hover{
+        filter: var(--small-filter-shadow);
+        background-color: var(--blueberry);
+        color: var(--white);
+    }
+
+    #shop a:hover > .width_limit{
+        filter: var(--small-filter-shadow);
+    }
+
+    #shop a:last-of-type:hover{
+        color: var(--white);
+    }
+
+    #coupons button:hover{
+        background-color: var(--veg);
+        color: var(--dark-gray);
+    }
+
+    #coupons button:hover > svg{
+        stroke: var(--dark-gray);
+    }
+
+    #mySubmit:hover{
+        background-color: var(--veg);
+        color: var(--dark-gray);
+        box-shadow: var(--small-shadow);
+    }
+
+    #mobile:hover{
+       text-decoration: underline;
+    }
+
+    footer ul a:hover, #terms a:hover{
+        padding-bottom: 0;
+        border-bottom: 5px dotted var(--dark-orange);
+    }
+
+    #social_media a:hover{
+        stroke: var(--white);
+        background-color: var(--cranberry);
+    }
+}
+
+@media screen and (min-width: 500px){
+    h1{
+        font-size: 2rem;
+        margin: 0 0 0 5vw;
+    }
+
+    #ad{
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    #shop .width_limit{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #coupons div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    #coupons.view_btn{
+        grid-column: 1/-1;
+    }
+
+    .coupon_tag{
+        max-width: 250px;
+        margin-top: 2rem;
+    }
+
+    #marinara{
+        align-items: stretch;
+    }
+
+    form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    #fName{
+        grid-column: 1/2;
+    }
+
+    label[for=lName]{
+        grid-row: 1/2;
+    }
+
+    #lName{
+        grid-column: 2/-1;
+    }
+
+    #myEmail{
+        grid-column: 1/-1;
+    }
+
+    #mySubmit{
+        grid-column: 1/-1;
+        max-width: 400px;
+    }
+
+    footer{
+        padding: 7rem 1rem;
+    }
+
+    footer div{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #social_media a{
+        padding: 1rem;
+        height: auto;
+    }
+
+    footer p{
+        grid-column: 1/-1;
+        text-align: left;
+        margin: 0;
+    }
+
+}
+
+@media screen and (min-width: 700px){
+    header{
+        grid-template-columns: 75% 1fr 1fr;
+    }
+
+    #ad{
+        background: url("images/hero-med.webp")
+        top center / contain
+        no-repeat
+        fixed
+        padding-box;
+        padding-top: 4rem;
+    }
+
+    #ad div{
+        background-color: var(--transparent-white);
+        padding: 1rem 2rem 2rem 2rem;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    #ad h2{
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    #ad p{
+        font-size: 1.2rem;
+        width: 500px;
+    }
+
+    #ad a{
+        margin-top: 1rem;
+    }
+
+    #coupons p.col-span{
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    footer{
+        padding: 7rem 3rem;
+    }
+
+    #address_and_phone{
+        margin: 0;
+    }
+
+    #social_media{
+        max-width: 340px;
+        margin: 0;
+        justify-self: end;
+        align-self: start;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    header{
+        grid-template-columns: 3fr 9fr 1fr;
+        padding: 2rem 1rem;
+        gap: 1rem;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    h1{
+        margin: 0;
+    }
+
+    nav{
+        width: 100%;
+        max-width: 800px;
+        grid-column: 2/3;
+        justify-self: end;
+    }
+
+    nav a:focus{
+        border-radius: 50px;
+        outline: 4px solid var(--cranberry);
+    }
+
+    #cart{
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    #menuToggle{
+        position: static;
+    }
+
+    #menuToggle ul{
+        visibility: visible;
+    }
+
+    #menuToggle input, #menuToggle label, #menuToggle label span{
+        display: none;
+    }
+
+    #menu{
+        position: static;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr 1.5fr 1.5fr;
+        gap: 0.5rem;
+        background-color: transparent;
+    }
+
+    #menu a{
+        color: var(--dark-gray);
+    }
+
+    #ad div{
+        background-color: transparent;
+        padding: 0;
+        width: auto;
+        color: var(--white);
+    }
+
+    #shop{
+        padding-top: 2rem;
+    }
+
+    #shop .width_limit{
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    #coupons, #club{
+        padding: 3rem 1rem;
+    }
+
+    #coupons div{
+        gap: 2rem;
+        width: 80%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    #coupons section{
+        max-width: 515px;
+        margin: 0 auto;
+    }
+
+    #coupons img{
+        width: calc(100% - 5rem);
+        padding: 0 2rem;
+        margin: 0 auto;
+    }
+
+    #coupons h3{
+        margin: 0 0 0.5rem 0;
+    }
+
+    form{
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1000px;
+    }
+
+    label{
+        font-size: 1.3rem;
+    }
+
+    label[for=lName], #lName{
+        grid-column: 2/3;
+    }
+
+    label[for=myEmail], #myEmail{
+        grid-column: 3/4;
+    }
+
+    label[for=myEmail]{
+        grid-row: 1/2;
+    }
+
+    #mySubmit{
+        grid-column: 3/4;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (min-width: 1300px){
+    #ad{
+        background: url("images/hero-lg.webp")
+        top center / cover
+        no-repeat
+        fixed
+        padding-box;
+        padding: 10rem 1rem;
+    }
+
+    #ad div{
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (min-width: 1675px){
+    #ad{
+        background-size: cover;
+    }
+}
